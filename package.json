@@ -1,0 +1,42 @@
+{
+  "name": "gulpfile-composer",
+  "version": "0.0.0",
+  "description": "A gulpfile compose tool that let you could write gulpfile seperately.",
+  "directories": {
+    "doc": "docs"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "build:doc:jsdoc": "jsdoc --readme README.md --package package.json --destination .build/docs/api --recurse ./src/*.js",
+    "build:doc:docco": "docco --output=.build/docs/code ./src/*.js",
+    "build:lib": "cp ./src/*.js ./lib",
+    "build:npm": "cp ./src/*.js ./lib",
+    "build:releases": "cp ./src/*.js ./lib",
+    "deploy:npm": "npm run build:npm && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codinggirl/gulpfile-composer.git"
+  },
+  "keywords": [
+    "table",
+    "html table",
+    "fit table",
+    "ajust table",
+    "table column"
+  ],
+  "author": "Richard Libre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codinggirl/gulpfile-composer/issues"
+  },
+  "homepage": "https://github.com/codinggirl/gulpfile-composer#readme",
+  "devDependencies": {
+    "docco": "^0.8.0",
+    "gulp": "^4.0.0",
+    "jest": "^24.1.0",
+    "jsdoc": "^3.5.5"
+  }
+}

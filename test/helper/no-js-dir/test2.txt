@@ -1,0 +1,6 @@
+// this is NOT a js file, too
+module.exports = {
+    "nojs": (cb) => {
+        cb(null)
+    }
+}

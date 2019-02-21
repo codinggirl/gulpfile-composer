@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+- node
+- 10
+- 8
+cache:
+- npm
+- yarn
+- directories:
+  - "/home/travis/.rvm/"
+jobs:
+  include:
+  - stage: codecov
+    install:
+    - npm install -g jest
+    - npm install -g codecov
+    - npm install
+    script: jest && codecov
+env:
+  global:
+    secure: U/Whhzwqpcj5dsJQ10UA6iCkg20QH82K5BBCq+wtbWhuKE57mEVE+KFhKGx9LF+mAKJbz+qx+6vSG5ZvsZU0OlIr4fg48aJdRLg2iCZmqp96RZgE3p0tmkhIeua6QJk5h2dAiKVAvsaUDM5vwxCcGczQfltdR1xtdS9gx3pgJ5GwP6C71V+xu1Yo/SwdZVgjZfNCi70pWs4Wd9YFuSu3se9GenAMqqEU1ACx1kUJ0qh/szFS16w8cEwwYADetpU1vOlEKotXtiQnGXw+W4A9+YcB4dtoM7rX9VQflq3SbzGVtmolCCqHo2yrf/B4uRsEKf+94kFTwKob2/qlYHS6L2MvwSWOQXIZXrd4hB3DjyF7KjzMoJnuf2gP3Hji9oR93Dwhgm+97kkkiQRcYztPPXflsYyzJUSI9pMTW737N++71lqCpld4d06enbUil7LSuk+e1FRcbNnGBN6ifcXCEysPihpZVludcI1Rv1qkwIMW+s8Q0W9s6+PfeIi4aWgZheK/ZHMais9MfFe6eF5X0Fazns7YukWIKRxxFnNXKS6ejSFpwYNChyehjnRs3K1HgKINZarrbl7GNhiRmiA6vnpWCoPCWEbPNOh5e1tSx3Kgiu7TAeD8ZwieAHA8BmxrgOVmdhxl1M1Sgse1DypDxRmQsvpRnfYhA67Wb8hTN/U=
