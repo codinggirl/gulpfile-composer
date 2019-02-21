@@ -21,11 +21,10 @@
     "url": "git+https://github.com/codinggirl/gulpfile-composer.git"
   },
   "keywords": [
-    "table",
-    "html table",
-    "fit table",
-    "ajust table",
-    "table column"
+    "gulp",
+    "gulpfile",
+    "compose",
+    "gulpfile compose"
   ],
   "author": "Richard Libre",
   "license": "MIT",
