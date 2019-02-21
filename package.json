@@ -1,6 +1,6 @@
 {
   "name": "gulpfile-composer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A gulpfile compose tool that let you could write gulpfile seperately.",
   "directories": {
     "doc": "docs"
