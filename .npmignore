@@ -14,3 +14,14 @@ test
 
 .travis.yml
 jest.config.js
+
+/docs-api
+/docs-docco
+
+/coverage
+
+/.dependabot
+
+.whitesource
+
+**/*.test.js

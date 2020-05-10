@@ -2,8 +2,7 @@
 
 node_modules/
 
-dist
-!dist/.gitkeep
+/coverage
 
-.build/
-lib/
+/docs-api
+/docs-docco

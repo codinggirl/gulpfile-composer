@@ -1,11 +1,12 @@
 let opts = {
     testMatch: [
+        "**/lib/**/*.test.[jt]s?(x)",
         "**/test/**/*.[jt]s?(x)"
     ],
     testPathIgnorePatterns: [
         "test/helper/(.*)"
     ],
-    coverageDirectory: '.build/coverage',
+    coverageDirectory: 'coverage',
     collectCoverage: true
 }
 

@@ -5,16 +5,16 @@
   "directories": {
     "doc": "docs"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "build:doc:jsdoc": "jsdoc --readme README.md --package package.json --destination .build/docs/api --recurse ./src/*.js",
-    "build:doc:docco": "docco --output=.build/docs/code ./src/*.js",
-    "build:lib": "cp ./src/*.js ./lib",
-    "build:npm": "cp ./src/*.js ./lib",
-    "build:releases": "cp ./src/*.js ./lib",
-    "deploy:npm": "npm run build:npm && npm publish"
+    "jsdoc": "jsdoc --readme README.md --package package.json --destination docs-api --recurse ./lib",
+    "docco": "docco --output=docs-docco ./lib/index.js",
+    "publish-preview": "npm publish --dry-run"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/codinggirl/gulpfile-composer#readme",
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "docco": "^0.8.0",
     "gulp": "^4.0.0",
     "jest": "^24.1.0",

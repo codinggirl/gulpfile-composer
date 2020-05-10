@@ -1,4 +1,4 @@
-const composer = require('../src/')
+const composer = require('../lib/')
 // const gulp = require('gulp')
 // const path = require('path')
 
