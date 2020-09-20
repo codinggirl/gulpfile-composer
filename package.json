@@ -14,8 +14,8 @@
     "test:coverage": "jest --coverage",
     "jsdoc": "jsdoc --readme README.md --package package.json --destination docs-api --recurse ./lib",
     "docco": "docco --output=docs-docco ./lib/index.js",
-    "jsdoc:preview": "http-server docs-api",
-    "docco:preview": "http-server docs-docco",
+    "jsdoc:preview": "serve docs-api",
+    "docco:preview": "serve docs-docco",
     "publish-preview": "npm publish --dry-run"
   },
   "repository": {
@@ -37,8 +37,8 @@
   "devDependencies": {
     "docco": "^0.8.0",
     "gulp": "^4.0.0",
-    "http-server": "^0.12.3",
     "jest": "^26.0.1",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "serve": "^11.3.2"
   }
 }
